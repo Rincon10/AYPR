@@ -34,17 +34,17 @@ def main():
     """
     PRE: Funcion que no recibe ninguna parametro 
     POST: ejecuta el algoritmo para leer la entrada de Problem : 10810
-    """"
+    """
     global steps
-    n = int( stdin.readline().strip() )
-    while ( n ):
+    n = stdin.readline().strip() 
+    while ( n  ):
         steps = 0
         lis = [ ]
-        for x in range( n ):
+        for x in range( int(n) ):
             lis.append( int( stdin.readline().strip() ) )
 
         sort( lis)
         print(steps)
-        n = int( stdin.readline().strip() )
+        n = stdin.readline().strip() 
 
 main()
