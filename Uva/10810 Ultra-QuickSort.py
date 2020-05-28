@@ -4,8 +4,9 @@ from sys import stdin
 
 def sort( li ):
     """
-    PRE: Ingresa un parametro llamado li, que sera la lista a ordenar
-    POST: Retorna la lista ordenada, calculando a su vez el numero de pasos 
+    PRE: Ingresa un parametro
+    @Param li List, lista a ordenar
+    POST: Retorna la lista ordenada, calculando a su vez el numero de pasos realizados
     """
     global steps
     lenght = len( li )//2
