@@ -4,11 +4,16 @@ import math
 
 ##Author: Ivan Camilo Rincon Saavedra
 
+
+"""
+    Metodo que se encarga de realizar la solucion del problema
+    
+    @Param phase,int que representa la fase actual en la cual se evaluara la permutacion
+    @Param answ, cadena de tipo String en cual se guardara la respuesta actual
+    @Param acu,  int en el cual sera el acumulado de la sumatoria  
+    @Return int ,numero de posibilidades posibles de la combinacion calculada 
+"""
 def pwSum( phase,answ,acu ):
-    """
-    PRE: ingresa la fase actual en la cual se evaluara la permutacion, answ sera la cadena en cual se guardara la respuesta actual, acu sera el acumulado de la sumatoria  
-    POST:  un entero, el numero de posibilidades posibles de la combinacion calculada 
-    """
     global x, n, stop
 
     if( acu == x  ):
@@ -29,3 +34,4 @@ def main():
     stop = math.ceil( x**(1/n)) + 1
     print( pwSum(1,"",0 ) )
 main()
+

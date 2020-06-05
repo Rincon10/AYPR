@@ -2,7 +2,7 @@ from sys import stdin
 
 
 """
-metodo que se encarga de calcular el digit number
+Metodo que se encarga de calcular el digit number
 
 @Param num str, numero al que se le calculara el digit number
 @Param lenght int, la longitud del num actual
