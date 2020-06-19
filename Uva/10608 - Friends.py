@@ -29,11 +29,9 @@ class Grafo:
             key2 = str( ( lst, fst ) );
 
             if( key1 not in self.friends.keys() ):
-                print( route )
                 self._friends+=1;
                 
             elif( key2 not in self.friends.keys() ):
-                print( route )
                 self._friends+=1;
 
             self.friends[ key1 ] = -1
@@ -46,6 +44,7 @@ class Grafo:
                 self.dfs(  element, route[:] );
 
     def getFriend( self ):
+        print(self.friends)
         return self._friends;
             
         
@@ -65,7 +64,7 @@ def main():
          for y in range( 1, n + 1 ):
              grafo.dfs( y, [] );
              
-         print( grafo.getFriend() );
+         print( grafo.getFriend(),"\n" );
          
      
 main() 
