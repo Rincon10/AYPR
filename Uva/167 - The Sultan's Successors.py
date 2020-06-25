@@ -1,11 +1,10 @@
 from sys import stdin
 
-##Author : Ivan Camilo Rincon Saavedra
+##Author : Iván Camilo Rincón Saavedra
 
 
 """
 Funcion que se encarga de validar la solucion parcial actual
-
 @Param solp List, lista que representa a la solucion parcial a validar
 @Param phase int , la phase actual que se va a validar
 @Return boolean, que dice si la solucion es valida o no
@@ -21,7 +20,6 @@ def valid( phase, solp ):
 
 """
 Funcion que se encarga de realizar todas las posibles soluciones
-
 @Param phase int , la phase actual a validar
 @Param solp List, lista que representa a la solucion parcial actual
 @Param acu, la sumatoria de las posiciones del tablero en que se colocaran las reinas

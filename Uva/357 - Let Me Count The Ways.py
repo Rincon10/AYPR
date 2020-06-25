@@ -8,26 +8,25 @@ deno  = [ 1, 5, 10, 25, 50 ]
 lenght = len( deno )
 sys.setrecursionlimit(2000)
 
+"""
+Funcion que muestra por pantalla el outPut solicitado por el problema
+@Param ways int, numero de posibilidades que se puede devolver en cambio de n
+"""
 def print_( ways ):
-    """
-    PRE:parametros
-    @Param ways int, numero de posibilidades que se puede devolver en cambio de n
-    POST: muestra por pantalla el outPut solicitado por el problema
-    """
     global n
+    
     if( ways == 1 ):
          print("There is only 1 way to produce "+str(n)+" cents change.")
     else:
         print("There are "+str(ways)+" ways to produce "+str(n)+" cents change.")
     
 
+"""
+Funcion determina el numero de diferentes combinacion es de monedas tal que produzcan la cantidad dada
+@Param phase int, indice que representara la seleccion de la denominacion actual
+@Param acu int, parametro que representa el acumulado actual de la sumatoria de las denominaciones
+"""
 def recu( phase,acu ):
-    """
-    PRE:parametros
-    @Param phase int, indice que representara la seleccion de la denominacion actual
-    @Param acu int, parametro que representa el acumulado actual de la sumatoria de las denominaciones
-    POST: determina el numero de diferentes combinacion es de monedas tal que produzcan la cantidad dada
-    """
     global n
     
     if ( ( phase == lenght ) or ( acu > n ) ):
@@ -41,6 +40,9 @@ def recu( phase,acu ):
         return recu( phase, acu + deno[ phase ] ) + recu( phase + 1 , acu )
             
 
+"""
+Funcion que se encarga de la lectura del problema solicitado
+"""
 def main():
     global n
     n = int( stdin.readline().strip() )

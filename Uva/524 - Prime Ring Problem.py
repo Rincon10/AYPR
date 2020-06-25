@@ -2,12 +2,14 @@ from sys import stdin
 import math
 
 
+##Author: Iván Camilo Rincón Saavedra
+
+"""
+Funcion que se encargara de decir si un numero es primo
+@Param number int, numero a verificar si es primo o no
+@Return boolean, que dice si number es primo o no
+"""
 def prime( number ):
-    """
-    metodo que se encargara de decir si un numero es primo o no
-    @Param number int, numero a verificar si es primo o no
-    @Return boolean, que dice si number es primo o no
-    """
     stop =int( math.sqrt( number ) )
     cont = 1
     for x in range( 2,stop + 1 ):
@@ -17,14 +19,14 @@ def prime( number ):
     return ( cont == 1 )
 
 
+
+"""
+Funcion que se encarga de validar la solucion parcial actual
+@Param phase int , la phase actual que se va a validar
+@Param solp List, lista que representa a la solucion parcial a validar
+@Return boolean, que dice si la solucion es valida o no
+"""
 def valid( phase, solp ):
-    """
-    metodo que se encarga de validar la solucion parcial actual
-    
-    @Param phase int , la phase actual que se va a validar
-    @Param solp List, lista que representa a la solucion parcial a validar
-    @Return boolean, que dice si la solucion es valida o no
-    """
     if( phase != 0 ):
         aft = ( phase - 1 ) % len(solp)
         
@@ -34,20 +36,19 @@ def valid( phase, solp ):
 
     return True 
         
-    
+
+
+"""
+Funcion que se encarga de realizar backTracking con las opciones proporcionadas
+(imprime todas la permutaciones validas)
+@Param phase int , numero que indicara la fase actual de la solucion parcial 
+@Param options list , las opciones a permutar
+@Param solp list ,solucion parcial actual
+@Param answ String, cadena que almacenara la solucion parcial y/o final
+"""    
 def backTracking( phase, options, solp, answ ):
     global number
 
-    """
-    Metodo que se encarga de realizar backTracking con las opciones proporcionadas
-    
-    @Param phase int , numero que indicara la fase actual de la solucion parcial 
-    @Param options list , las opciones a permutar
-    @Param solp list ,solucion parcial actual
-    @Param answ String, cadena que almacenara la solucion parcial y/o final
-    
-    imprime todas la permutaciones validas
-    """
     if( phase < number ):
         for x in range( len( options ) ):
             mOptions = options[:]
@@ -68,7 +69,9 @@ def backTracking( phase, options, solp, answ ):
                         print( mAnsw.strip())
     
     
-
+"""
+Funcion que se encarga en la lectura del problema
+"""
 def main():
     global number
     number, cont  = stdin.readline().strip(), 1

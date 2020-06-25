@@ -2,15 +2,15 @@ from sys import stdin
 
 ##Author: Ivan Camilo Rincon Saavedra
 
+"""
+Funcion que se encarga de la solucion del problema
+@Param i int, la posicion actual en la cadena X
+@Param j int, la posicion actual en la cadena Y
+@Return  int, el minimo de pasos necesarios para convertir X en Y
+"""
 def recu( i, j):
-    """
-    PRE: ingresan dos parametos
-    @Param: i int, la posicion actual en la cadena X
-    @Param: j int, la posicion actual en la cadena Y
-    
-    POST: retorna el minimo de pasos necesarios para convertir X en Y
-    """
     global X,Y, dic
+    
     answ = float("inf")
     
     key = str( (i,j) )
@@ -34,11 +34,11 @@ def recu( i, j):
     
     
 
+"""
+Funcion que se encarga de leer la entrada del problema
+"""
 def main():
     global X,Y,dic
-    """
-    Metodo que se encarga de leer la entrada del problema
-    """
 
     X = stdin.readline().strip()
     while( X ):

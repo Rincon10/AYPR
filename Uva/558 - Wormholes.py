@@ -4,7 +4,7 @@ from sys import stdin
 """
 Clase que representa al objeto grafo
 @Author Iván Camilo Rincón Saavedra
-@Version 1.0 24/06/2020
+@Version 1.0 24/06/2020.
 """
 class Grafo:
     """
@@ -33,7 +33,6 @@ class Grafo:
 
     """
     Metodo que se encarga de ejecutar el algoritmo de disjkstra a la clase Grafo
-    
     """
     def dijkstra( self ):
         time, cont, stop   =  [ float("inf") ] * self.length, 0 , False ;

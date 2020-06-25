@@ -1,12 +1,11 @@
 from sys import stdin
 
-##Author: Ivan Camilo Rincon Saavedra
+##Author: Iván Camilo Rincón Saavedra
 
 
 
 """
 Funcion que se encarga de validar la solucion parcial actual
-    
 @Param solp lista, lista que representa la solucion parcial a vallidar
 @Return boolean, que dice si la solp es valida 
 """
@@ -30,7 +29,6 @@ def valid( solp ):
 
 """
 Funcion que se encarga de realizar backTracking con las opciones proporcionadas, mostrandolo a su vez por pantalla
-    
 @Param phase int , numero que indicara la fase actual de la solucion parcial 
 @Param options list , las opciones a permutar
 @Param solp list ,solucion parcial actual
