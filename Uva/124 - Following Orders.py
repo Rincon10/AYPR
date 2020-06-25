@@ -5,12 +5,11 @@ from sys import stdin
 
 
 """
-    Metodo que se encarga de validar la solucion parcial actual
+Funcion que se encarga de validar la solucion parcial actual
     
-    @Param solp lista, lista que representa la solucion parcial a vallidar
-    @Return boolean, que dice si la solp es valida 
+@Param solp lista, lista que representa la solucion parcial a vallidar
+@Return boolean, que dice si la solp es valida 
 """
-
 def valid( solp ):
     global lenght, pairs
     
@@ -30,12 +29,12 @@ def valid( solp ):
 
 
 """
-    Metodo que se encarga de realizar backTracking con las opciones proporcionadas, mostrandolo a su vez por pantalla
+Funcion que se encarga de realizar backTracking con las opciones proporcionadas, mostrandolo a su vez por pantalla
     
-    @Param phase int , numero que indicara la fase actual de la solucion parcial 
-    @Param options list , las opciones a permutar
-    @Param solp list ,solucion parcial actual
-    @Param string String, cadena que almacenara la solucion parcial
+@Param phase int , numero que indicara la fase actual de la solucion parcial 
+@Param options list , las opciones a permutar
+@Param solp list ,solucion parcial actual
+@Param string String, cadena que almacenara la solucion parcial
 """
 def backTracking( phase,options , solp ,string ):
     global lenght, pairs
@@ -61,6 +60,9 @@ def backTracking( phase,options , solp ,string ):
                 else:
                     print( mString )
 
+"""
+Funcion principal que se encarga de la lectura del problema
+"""
 def main():
     global lenght, pairs
     
