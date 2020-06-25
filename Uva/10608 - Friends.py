@@ -1,6 +1,13 @@
 from sys import stdin
 
 
+
+"""
+Clase que representara al objeto grafo
+@Author Ivan Camilo Rincon Saavedra
+@Version 1.0 24/06/2020
+@Param size int, representara el numero de nodos que tomara el grafo
+"""
 class Grafo:
     def __init__( self, size ):
         self.data = {};
@@ -62,7 +69,7 @@ def main():
 
          for y in range( 1, n + 1 ):
              grafo.dfs( y, [] );
-             
+        
          print( grafo.getFriend(),"\n" );
          
      
