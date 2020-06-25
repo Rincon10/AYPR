@@ -36,7 +36,6 @@ class Grafo:
     """
     def dijkstra( self ):
         time, cont, stop   =  [ float("inf") ] * self.length, 0 , False ;
-        visited = [ False ] * self.length;
         time[ 0 ] = 0;
         qp = [ [0, 0] ] ;
 
