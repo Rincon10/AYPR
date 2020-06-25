@@ -22,7 +22,7 @@ class Grafo:
 
     def dfs( self , currentNode, route ):
         route+=[ currentNode ];
-
+        print(route )
         fst, lst = route[0], route[-1];
         if( fst != lst ):
             key1 = str( ( fst, lst ) );
@@ -44,7 +44,6 @@ class Grafo:
                 self.dfs(  element, route[:] );
 
     def getFriend( self ):
-        print(self.friends)
         return self._friends;
             
         
