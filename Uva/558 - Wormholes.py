@@ -1,18 +1,40 @@
 from sys import stdin
 
 
+"""
+Clase que representa al objeto grafo
+@Author Iván Camilo Rincón Saavedra
+@Version 1.0 24/06/2020
+"""
 class Grafo:
+    """
+    Constructor de la clase grafo
+    @Param length int, representara el numero de nodos que tendra el grafo
+    """
     def __init__( self, length ):
         self.data = {};
         self.length = length;
 
+    """
+    Metodo que se encarga de añadir los nodos a el grafo
+    """
     def addVertex( self  ):
         for vertex in range( self.length ):
             self.data[ vertex ] = [];
 
+    """
+    Metodo que se encarga de añadir las aristas entre cada nodo con su respectivo peso
+    @Param fstVertex int , nodo a el cual se le añadira la arista con su peso
+    @Param scndVertex int , nodo vecino de fstVertex
+    @Param weigth int , peso de la arista entre los nodos fstVertex y scndVertex
+    """
     def addEdge( self, fstVertex, scndVertex, weigth ):
         self.data[ fstVertex ].append( [ scndVertex, weigth ] );
 
+    """
+    Metodo que se encarga de ejecutar el algoritmo de disjkstra a la clase Grafo
+    
+    """
     def dijkstra( self ):
         time, cont, stop   =  [ float("inf") ] * self.length, 0 , False ;
         visited = [ False ] * self.length;
@@ -38,6 +60,9 @@ class Grafo:
         print( 'possible' if ( stop ) else 'not possible' );
          
 
+"""
+Función principal que se encarga la lectura del problema a resolver.
+"""
 def main():
     c = int( stdin.readline().strip() );
     for cases in range( c ):
