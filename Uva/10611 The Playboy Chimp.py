@@ -11,12 +11,14 @@ for el in M:
         last = el
 lon = len(new)
 
+
+
+"""
+Función que se encarga de realizar una busqueda de un elemento, con el algoritmo de busqueda binaria
+@Param el int, elementa a buscar en una lista
+@Return int,int ;los indices que se encuentran por izquierda y derecha del elemento 
+"""
 def binarySearch( el ):
-    """
-    PRE: metodo que se encarga de realizar una busqueda de un elemento
-    @Param el int, elementi a buscar en una lista
-    POST: retorna los indices que se encuentran por izquierda y derecha del elemento 
-    """
     iz, der = 0, lon-1
 
     while ( iz <= der ):
@@ -33,7 +35,9 @@ def binarySearch( el ):
     
     return  min(iz,der), max(iz,der)
     
-
+"""
+Función principal que se encarga de la lectura del problema.
+"""
 def main():
     
     N = [int(x) for x in stdin.readline().strip().split()]

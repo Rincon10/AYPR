@@ -2,12 +2,15 @@ from sys import stdin
 
 ##Author: Ivan Camilo Rincon Saavedra
 
+
+
+"""
+Función que se encargara de ordenar una lista de elementos usando el algoritmo MergeSort
+@Param li List, lista a ordenar
+@Return List, retorna la lista ordenada ; calculando a su vez el número de pasos realizados.
+"""
 def sort( li ):
-    """
-    PRE: Ingresa un parametro
-    @Param li List, lista a ordenar
-    POST: Retorna la lista ordenada, calculando a su vez el numero de pasos realizados
-    """
+
     global steps
     lenght = len( li )//2
 
@@ -30,12 +33,13 @@ def sort( li ):
             j+=1
     return answ
 
+
+"""
+Función principal que ejecuta el algoritmo para leer la entrada de Problem : 10810
+"""
 def main():
-    """
-    PRE: Funcion que no recibe ninguna parametro 
-    POST: ejecuta el algoritmo para leer la entrada de Problem : 10810
-    """
     global steps
+    
     n = stdin.readline().strip() 
     while ( n  ):
         steps = 0

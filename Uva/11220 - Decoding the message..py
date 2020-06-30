@@ -1,6 +1,11 @@
 from sys import stdin
 
 
+##Author: Iván Camilo Rincón Saavedra
+
+"""
+Función que se encarga de la solución del problema
+"""
 def main():
     n= int( stdin.readline().strip() )
     stdin.readline().strip()
