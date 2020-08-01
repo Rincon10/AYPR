@@ -1,7 +1,7 @@
 from sys import stdin 
 
 ## Author: Iván Camilo Rincón Saavedra
-
+## 31/07/2020
 ##Solución por el metodo iterativo, (botton up)
 
 """
